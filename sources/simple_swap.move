@@ -1,4 +1,4 @@
-module swap_account::SimplpSwapRouter{
+module swap_account::SimplpSwap{
     //generate_lp_coin
     //create_pool
     //swap
