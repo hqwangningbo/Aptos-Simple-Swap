@@ -1,9 +1,9 @@
 module swap_account::SimplpSwap{
     //generate_lp_coin
     //create_pool
-    //swap
     //add_liquidity
     //remove_liquidity
+    //swap
 
     use aptos_framework::coin::{Self,Coin, MintCapability, BurnCapability};
     use std::string;
@@ -147,7 +147,7 @@ module swap_account::SimplpSwap{
        amount_in = amount_in * 997 /1000
        amount_out = amount_in * out_reserve / (in_reserve + amount_in)
     */
-    public entry fun swap<X,Y>(sender:&signer,amount_in:u64) acquires Pair{
+    public entry fun swap_x_to_y<X,Y>(sender:&signer,amount_in:u64) acquires Pair{
         //make sure lp exists
         assert!(exists<Pair<X,Y>>(@swap_account),1000);
 

@@ -4,7 +4,7 @@ module swap_account::Coins{
     use aptos_framework::coin;
     use std::string;
     use std::signer::address_of;
-    use swap_account::SimplpSwap::{generate_lp_name_symbol, create_pool, pair_exist, add_liquiduty, LP, get_coin, remove_liquidity, swap, get_amount_out};
+    use swap_account::SimplpSwap::{generate_lp_name_symbol, create_pool, pair_exist, add_liquiduty, LP, get_coin, remove_liquidity, swap_x_to_y, get_amount_out};
     use aptos_framework::account::create_account_for_test;
     use swap_account::Math::sqrt;
     use std::option;
@@ -144,7 +144,7 @@ module swap_account::Coins{
         create_pool<NB,USDT>(sender);
         add_liquiduty<NB,USDT>(sender,1000000,1000000);
 
-        swap<NB,USDT>(sender,100);
+        swap_x_to_y<NB,USDT>(sender,100);
         let (in_reserve,out_reserve) = get_coin<NB,USDT>();
         let amount_out  = get_amount_out(100,(in_reserve as u128),(out_reserve as u128));
 

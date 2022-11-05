@@ -48,7 +48,7 @@ module swap_account::Math {
     }
 
     /// https://medium.com/coinmonks/math-in-solidity-part-3-percents-and-proportions-4db014e080b1
-    /// calculate x * y /z with as little loss of precision as possible and avoid overflow
+    /// calculate x * y / z with as little loss of precision as possible and avoid overflow
     public fun mul_div(x: u128, y: u128, z: u128): u128 {
         if (y == z) {
             return x
