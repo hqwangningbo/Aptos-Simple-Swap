@@ -7,6 +7,4 @@ rev = 'main'
 subdir = 'aptos-move/framework/aptos-framework'
 
 [addresses]
-my_address = "0xd8f6f1195aad9e39a3bd4bfe98a682bc6e6618b8640cf39c26f79a42863d6172"
 swap_account = "0xd8f6f1195aad9e39a3bd4bfe98a682bc6e6618b8640cf39c26f79a42863d6172"
-swap_pool_account = "0xd8f6f1195aad9e39a3bd4bfe98a682bc6e6618b8640cf39c26f79a42863d6172"
